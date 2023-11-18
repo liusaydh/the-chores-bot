@@ -133,32 +133,32 @@ async def on_message(message):
 # Outputs
 
 	if message.content == 'kitchen':
-		response = "\n".join(random.choices(kitchen, k=3))
+		response = "\n".join(random.sample(kitchen, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
 	if message.content == 'bathroom':
-		response = "\n".join(random.choices(bathroom, k=3))
+		response = "\n".join(random.sample(bathroom, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
 	if message.content == 'toilet':
-		response = "\n".join(random.choices(toilet, k=3))
+		response = "\n".join(random.sample(toilet, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
 	if message.content == 'dining room':
-		response = "\n".join(random.choices(dining, k=3))
+		response = "\n".join(random.sample(dining, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
 	if message.content == 'bedroom':
-		response = "\n".join(random.choices(bedroom, k=3))
+		response = "\n".join(random.sample(bedroom, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
 	if message.content == 'living room':
-		response = "\n".join(random.choices(living, k=3))
+		response = "\n".join(random.sample(living, k=3))
 		await message.channel.send(response)
 	await bot.process_commands(message)
 
