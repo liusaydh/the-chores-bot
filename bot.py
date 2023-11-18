@@ -62,7 +62,7 @@ async def on_message(message):
 		'Today, you should wash the shower.', 
 		'Today, you should unplug the shower.', 
 		'Today, you should vacuum the floors.', 
-		'Today, you should change theshower mat.', 
+		'Today, you should change the shower mat.', 
 		'Today, you should wash the floors.']
 
 	toilet = [
