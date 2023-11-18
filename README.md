@@ -10,6 +10,6 @@ So, for example, if I type "kitchen" in my empty server, it gives three random c
 <br>
 
 What I want to do with this eventually is: <br>
-	- [] have build-in commands (preferably slash commands) <br>
-	- [] be able to choose a certain number of random chores to be output <br>
-	- [] possibly have a combination of chores from multiple lists (a pre-set number)
+	- [ ] have build-in commands (preferably slash commands) <br>
+	- [ ] be able to choose a certain number of random chores to be output <br>
+	- [ ] possibly have a combination of chores from multiple lists (a pre-set number)
