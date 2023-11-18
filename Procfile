@@ -1,1 +1,1 @@
-worker: python3 C:\Users\Lucy\Documents\bot\bot.py
+worker: python3 bot.py
