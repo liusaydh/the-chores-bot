@@ -16,4 +16,4 @@ So, for example, if I type "kitchen" in my empty server, it gives three random c
  3. Possibly have a combination of chores from multiple lists (a pre-set number). <br>
  4. Make the output nicer, such as "In the kitchen, today you should:" and then have it be a list of chores.
  5. Write a help instance.
- 6. No duplicates.
+ ~~6. No duplicates.~~ DONE
