@@ -17,7 +17,7 @@ GUILD = os.getenv('DISCORD_GUILD')
 # intents
 
 intents = discord.Intents().all()
-bot = commands.Bot(command_prefix=',', intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents)
     
 # HRH The Chores Bot
 
@@ -29,137 +29,138 @@ async def on_message(message):
 # The chores list
 
 	kitchen = [
-		'Today, you should clean out the fridge.', 
-		'Today, you should take out recycling.', 
-		'Today, you should wash recycling trashcans and the shelf.', 
-		'Today, you should wash the dishes.', 
-		'Today, you should vacuum the floor.', 
-		'Today, you should clean the countertops.', 
-		'Today, you should clean the oven.', 
-		'Today, you should change the dishes pad.', 
-		'Today, you should declutter the spice rack.', 
-		'Today, you should declutter the tea rack.', 
-		'Today, you should wipe down the outer elements.',
-		'Today, you should wipe down the inner elements.', 
-		'Today, you should declutter the entrance shelf.', 
-		'Today, you should declutter the lazy susan cabinet.', 
-		'Today, you should wipe down and declutter the upper cabinets.', 
-		'Today, you should wash the floors.', 
-		'Today, you should declutter shoes.', 
-		'Today, you should declutter the side cabinet.', 
-		'Today, you should declutter the wall board.', 
-		'Today, you should declutter the hallway corner.']
+		' clean out the fridge',
+		' take out recycling',
+		' wash recycling trashcans and the shelf',
+		' wash the dishes',
+		' vacuum the floor',
+		' clean the counter tops',
+		' clean the oven',
+		' change the dishes pad',
+		' declutter the spice rack',
+		' declutter the tea rack',
+		' wipe down the outer elements',
+		' wipe down the inner elements',
+		' declutter the entrance shelf',
+		' declutter the lazy susan cabinet',
+		' wipe down and declutter the upper cabinets',
+		' declutter the misc middle and top shelves'
+		' wash the floors',
+		' declutter shoes',
+		' declutter the side cabinet',
+		' declutter the wall board',
+		' declutter the hallway corner']
 
 	bathroom = [
-		'Today, you should wipe down the mirror.', 
-		'Today, you should declutter the sink.', 
-		'Today, you should wipe down the sink.', 
-		'Today, you should change the towels.', 
-		'Today, you should declutter the storage.', 
-		'Today, you should wipe down the storage.',
-		'Today, you should change the trashbag.', 
-		'Today, you should wipe down the trash.', 
-		'Today, you should wash the shower.', 
-		'Today, you should unplug the shower.', 
-		'Today, you should vacuum the floors.', 
-		'Today, you should change the shower mat.', 
-		'Today, you should wash the floors.']
+		' wipe down the mirror',
+		' declutter the sink',
+		' wipe down the sink',
+		' change the towels',
+		' declutter the storage',
+		' wipe down the storage',
+		' change the trash bag',
+		' wipe down the trash',
+		' wash the shower',
+		' unplug the shower',
+		' vacuum the floors',
+		' change the shower mat',
+		' wash the floors']
 
 	toilet = [
-		'Today, you should wipe down the mirror.', 
-		'Today, you should wipe down the sink.', 
-		'Today, you should wipe down the TP shelf.', 
-		'Today, you should change the towel.', 
-		'Today, you should wipe down the accessories.', 
-		'Today, you should disinfect the switches/knobs.',
-		'Today, you should clean the toilet.', 
-		'Today, you should put on a toilet earring.', 
-		'Today, you should vacuum the floor.', 
-		'Today, you should mop the floor.']
+		' wipe down the mirror',
+		' wipe down the sink',
+		' wipe down the TP shelf',
+		' change the towel',
+		' wipe down the accessories',
+		' disinfect the switches/knobs',
+		' clean the toilet',
+		' put on a toilet earring',
+		' vacuum the floor',
+		' mop the floor']
 
 	dining = [
-		'Today, you should dust.', 
-		'Today, you should wipe down the chairs.', 
-		'Today, you should declutter the upper shelf.', 
-		'Today, you should wipe down the upper shelf.', 
-		'Today, you should declutter the table.', 
-		'Today, you should change the tablecloths.', 
-		'Today, you should wipe down the table.', 
-		'Today, you should clean cat dishes.', 
-		'Today, you should clean the cat tray.', 
-		'Today, you should clean the floor where the cat eats.', 
-		'Today, you should vacuum the floor.', 
-		'Today, you should wash the floors.']
+		' dust',
+		' wipe down the chairs',
+		' declutter the upper shelf',
+		' wipe down the upper shelf',
+		' declutter the table',
+		' change the tablecloths',
+		' wipe down the table',
+		' clean cat dishes',
+		' clean the cat tray',
+		' clean the floor where the cat eats',
+		' vacuum the floor',
+		' wash the floors']
 
 	bedroom = [
-		'Today, you should declutter the bedsides.', 
-		'Today, you should declutter the bed storage.', 
-		'Today, you should declutter the laundry room.', 
-		'Today, you should declutter the low small wardrobe surface.',
-		'Today, you should declutter the lower wardrobe.', 
-		'Today, you should declutter the low small wardrobe cabinets.', 
-		'Today, you should wipe and clear the desk and upper desk area.', 
-		'Today, you should vaccuum the mattress.',
-		'Today, you should wipe the baseboard.', 
-		'Today, you should change the sheets.', 
-		'Today, you should wash the bedding.', 
-		'Today, you should wash the towels.', 
-		'Today, you should hang up the wet clothes.', 
-		'Today, you should fold the laundry.', 
-		'Today, you should put away the laundry.', 
-		'Today, you should dust.',
-		'Today, you should disinfect light switches/knobs/handles.', 
-		'Today, you should vacuum the floors.', 
-		'Today, you should wash the floors.']
+		' declutter the bedsides',
+		' declutter the bed storage',
+		' declutter the laundry room',
+		' declutter the low small wardrobe surface',
+		' declutter the lower wardrobe',
+		' declutter the low small wardrobe cabinets',
+		' wipe and clear the desk and upper desk area',
+		' vacuum the mattress',
+		' wipe the baseboard',
+		' change the sheets',
+		' wash the bedding',
+		' wash the towels',
+		' hang up the wet clothes',
+		' fold the laundry',
+		' put away the laundry',
+		' dust',
+		' disinfect light switches/knobs/handles',
+		' vacuum the floors',
+		' wash the floors']
 
 	living = [
-		'Today, you should dust.', 
-		'Today, you should vacuum the floors and the rug.', 
-		'Today, you should put away remotes and controllers.',
-		'Today, you should dust the windowsills.', 
-		'Today, you should declutter the cat toy shed.',
-		'Today, you should declutter and dust the TV stand.', 
-		'Today, you should wipe down the TV.', 
-		'Today, you should arrange the couch.', 
-		'Today, you should wipe down the coffee stand.', 
-		'Today, you should declutter the desk stand.',
-		'Today, you should declutter the desk.', 
-		'Today, you should clean the kitty litter.', 
-		'Today, you should clean the kitty area.', 
-		'Today, you should order the board.', 
-		'Today, you should wash the floors.', 
-		'Today, you should order and wipe the bookshelves.']
+		' dust',
+		' vacuum the floors and the rug',
+		' put away remotes and controllers',
+		' dust the windowsills',
+		' declutter the cat toy shed',
+		' declutter and dust the TV stand',
+		' wipe down the TV',
+		' arrange the couch',
+		' wipe down the coffee stand',
+		' declutter the desk stand',
+		' declutter the desk',
+		' clean the kitty litter',
+		' clean the kitty area',
+		' order the board',
+		' wash the floors',
+		' order and wipe the bookshelves']
 
 # Outputs
 
 	if message.content == 'kitchen':
-		response = "\n".join(random.sample(kitchen, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(kitchen, k=3))
+		await message.channel.send(f'Today in the kitchen, you should: {response}.')
 	await bot.process_commands(message)
 
 	if message.content == 'bathroom':
-		response = "\n".join(random.sample(bathroom, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(bathroom, k=3))
+		await message.channel.send(f'Today in the bathroom, you should: {response}.')
 	await bot.process_commands(message)
 
 	if message.content == 'toilet':
-		response = "\n".join(random.sample(toilet, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(toilet, k=3))
+		await message.channel.send(f'Today in the toilet, you should: {response}.')
 	await bot.process_commands(message)
 
 	if message.content == 'dining room':
-		response = "\n".join(random.sample(dining, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(dining, k=3))
+		await message.channel.send(f'Today in the dining room, you should: {response}.')
 	await bot.process_commands(message)
 
 	if message.content == 'bedroom':
-		response = "\n".join(random.sample(bedroom, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(bedroom, k=3))
+		await message.channel.send(f'Today in the bedroom room, you should: {response}.')
 	await bot.process_commands(message)
 
 	if message.content == 'living room':
-		response = "\n".join(random.sample(living, k=3))
-		await message.channel.send(response)
+		response = ",".join(random.sample(living, k=3))
+		await message.channel.send(f'Today in the living room room, you should: {response}.')
 	await bot.process_commands(message)
 
 bot.run(TOKEN)
