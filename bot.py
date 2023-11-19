@@ -114,7 +114,7 @@ async def on_message(message):
 		' wash the floors']
 
 	living = [
-		' dust',
+		' dust the living room area',
 		' vacuum the floors and the rug',
 		' put away remotes and controllers',
 		' dust the windowsills',
