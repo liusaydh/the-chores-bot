@@ -12,8 +12,9 @@ So, for example, if I type "kitchen" in my empty server, it gives three random c
 ## What I want to do with this eventually <br>
 
 ~~Have built-in commands (preferably slash commands).~~ DONE <br>
+~~Make the output nicer, such as "In the kitchen, today you should:" and then have it be a list of chores.~~ DONE <br>
+~~No duplicates.~~ DONE
  1. Be able to choose a certain number of random chores to be output. <br>
  2. Possibly have a combination of chores from multiple lists (a pre-set number). <br>
-~~Make the output nicer, such as "In the kitchen, today you should:" and then have it be a list of chores.~~ DONE <br>
  3. Write a help instance. <br>
-~~No duplicates.~~ DONE
+
