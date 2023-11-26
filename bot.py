@@ -29,7 +29,6 @@ async def on_message(message):
 # slash commands per room in the house
 
 # kitchen
-
 @bot.tree.command(name="kitchen",description="List of kitchen chores.")
 async def kitchen(interaction:discord.Interaction) -> None:
 
@@ -185,6 +184,6 @@ async def living(interaction: discord.Interaction) -> None:
 
     await interaction.response.send_message(f'Today in the living room, you should:{response}.')
 
-# run the bot
+# run the bot :)
 
 bot.run(TOKEN)
